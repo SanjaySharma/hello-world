@@ -10,6 +10,7 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.TaskStackBuilder;
+import android.util.Log;
 
 import com.google.developer.taskmaker.MainActivity;
 import com.google.developer.taskmaker.R;
@@ -37,7 +38,7 @@ public class ReminderAlarmService extends IntentService {
     protected void onHandleIntent(Intent intent) {
         NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         Uri uri = intent.getData();
-
+        Log.e("demo ","sanjay");
         //Display a notification to view the task details
         Intent action = new Intent(this, TaskDetailActivity.class);
         action.setData(uri);
